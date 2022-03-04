@@ -1,10 +1,15 @@
 # angular-micros
 Angular projects to demonstrate micro-frontend using module federation
+## Requires Angular >= v13
 
+## Usage
 To use the applications, first install all dependencies for each application using `npm install` 
 
 second, run `ng serve -o` for each application
 
+## Notes
+Both applications need to be running on the correct host+port in order for this to work. If one of the microservice apps is down, the main application will stop working. 
 
-Note: there are 2 applications. One is setup to run on port 5000, and another on port 3000. If the projects are running 
-on different ports, that will cause the application to break
+There might be a way to avoid this, I haven't looked into it too much. 
+
+The host for the apps is `localhost` and the port for the host-app is `5000` and for app1 is `3000`. It's important to keep this in mind when running the application using a different server
